@@ -1,0 +1,6 @@
+title = "Playlist exemple"
+
+datasets = [
+    "5eda3e7400d5f1f95aef153b",
+    "sinoe-r-tonnage-decheteries-par-type-de-dechet-et-departement"
+]
