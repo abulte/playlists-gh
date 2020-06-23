@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ playlist.title }}</title>
+</head>
+<body>
+    <h1>{{ playlist.title }}</h1>
+    {% for dataset in playlist.datasets %}
+        <div data-udata-dataset="{{ dataset.id }}"></div>
+    {% endfor %}
+    <script data-udata="https://www.data.gouv.fr/" src="https://static.data.gouv.fr/static/oembed.js" async defer></script>
+</body>
+</html>

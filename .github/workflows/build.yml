@@ -8,6 +8,7 @@ jobs:
     env:
       BUILD_OUT_DIR: build
       API_OUT_DIR: api
+      PLAYLIST_OUT_DIR: playlists
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
