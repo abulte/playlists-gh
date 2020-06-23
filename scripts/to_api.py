@@ -18,7 +18,9 @@ DATASET_ATTRS = [
     "owner",
     "organization"
 ]
-OUT_DIR = os.getenv('API_OUT_DIR', 'build/')
+BUILD_OUT_DIR = os.getenv('BUILD_OUT_DIR', 'build')
+API_OUT_DIR = os.getenv('API_OUT_DIR', 'api')
+OUT_DIR = Path(BUILD_OUT_DIR) / Path(API_OUT_DIR)
 
 path = Path("playlists/")
 
@@ -38,7 +40,7 @@ for playlist in path.glob("*.toml"):
         "title": data.get("title"),
         "datasets": datasets
     }
-    Path(OUT_DIR).mkdir(exist_ok=True, parents=True)
-    out_path = Path(OUT_DIR) / f'{playlist.stem}.json'
+    OUT_DIR.mkdir(exist_ok=True, parents=True)
+    out_path = OUT_DIR / f'{playlist.stem}.json'
     with out_path.open('w') as out_file:
         out_file.write(json.dumps(playlist_api))
