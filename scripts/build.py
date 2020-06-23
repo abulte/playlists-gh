@@ -27,7 +27,7 @@ DATASET_ATTRS = [
 ]
 BUILD_OUT_DIR = os.getenv('BUILD_OUT_DIR', 'build')
 API_OUT_DIR = os.getenv('API_OUT_DIR', 'api')
-PLAYLIST_OUT_DIR = os.getenv('API_OUT_DIR', 'playlists')
+PLAYLIST_OUT_DIR = os.getenv('PLAYLIST_OUT_DIR', 'playlists')
 api_out_dir = Path(BUILD_OUT_DIR) / Path(API_OUT_DIR)
 playlist_out_dir = Path(BUILD_OUT_DIR) / Path(PLAYLIST_OUT_DIR)
 
