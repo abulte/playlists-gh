@@ -38,7 +38,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build files
-        run: python scripts/to_api.py
+        run: python scripts/build.py
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
